@@ -62,7 +62,7 @@ function autoPost(ID) {
         if (error == 'Hết thời gian chờ.') {
           resolve()
         } else {
-          $notification.post('Tự động tham gia TestFlight', error, '')
+          $notification.post('Chờ tham gia TestFlight', error, '')
           console.log(ID + ' ' + error)
           resolve()
         }
