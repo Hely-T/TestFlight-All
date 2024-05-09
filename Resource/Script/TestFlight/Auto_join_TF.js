@@ -1,15 +1,15 @@
 /*
-脚本作者：DecoAri
-修复作者: xream
-引用地址：https://raw.githubusercontent.com/DecoAri/JavaScript/main/Surge/Auto_join_TF.js
-感谢某位大佬将改写为Loon版脚本！
+Script Author: DecoAri
+Fix Author: Hely-T
+Reference: https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/Auto_join_TF.js
+Thanks to a great person for adapting this script into Loon version!
 */
 !(async () => {
   ids = $persistentStore.read('APP_ID')
   if (ids == null) {
-    $notification.post('未添加 TestFlight APP_ID', '请手动添加或使用 TestFlight 链接自动获取', '')
+    $notification.post('TestFlight APP_ID chưa được thêm', 'Vui lòng thêm thủ công hoặc sử dụng liên kết TestFlight để tải tự động', '')
   } else if (ids == '') {
-    $notification.post('所有 TestFlight 已加入完毕', '请手动禁用该插件', '')
+    $notification.post('Tất cả TestFlight đã được thêm vào', 'Vui lòng tắt plugin theo cách thủ công', '')
   } else {
     ids = ids.split(',')
     for await (const ID of ids) {
@@ -35,8 +35,8 @@ function autoPost(ID) {
           ids = $persistentStore.read('APP_ID').split(',')
           ids = ids.filter(ids => ids !== ID)
           $persistentStore.write(ids.toString(), 'APP_ID')
-          console.log(ID + ' ' + '不存在该 TestFlight，已自动删除该 APP_ID')
-          $notification.post(ID, '不存在该 TestFlight', '已自动删除该 APP_ID')
+          console.log(ID + ' ' + 'TestFlight không tồn tại, APP_ID đã tự động bị xóa')
+          $notification.post(ID, 'TestFlight không tồn tại', 'APP_ID đã tự động bị xóa')
           resolve()
         } else {
           let jsonData = JSON.parse(data)
@@ -49,8 +49,8 @@ function autoPost(ID) {
           } else {
             $httpClient.post({ url: testurl + ID + '/accept', headers: header }, function (error, resp, body) {
               let jsonBody = JSON.parse(body)
-              $notification.post(jsonBody.data.name, 'TestFlight 加入成功', '')
-              console.log(jsonBody.data.name + ' TestFlight 加入成功')
+              $notification.post(jsonBody.data.name, 'TestFlight đã tham gia thành công', '')
+              console.log(jsonBody.data.name + ' TestFlight đã tham gia thành công')
               ids = $persistentStore.read('APP_ID').split(',')
               ids = ids.filter(ids => ids !== ID)
               $persistentStore.write(ids.toString(), 'APP_ID')
@@ -62,7 +62,7 @@ function autoPost(ID) {
         if (error == 'The request timed out.') {
           resolve()
         } else {
-          $notification.post('自动加入 TestFlight', error, '')
+          $notification.post('Tự động tham gia TestFlight', error, '')
           console.log(ID + ' ' + error)
           resolve()
         }
