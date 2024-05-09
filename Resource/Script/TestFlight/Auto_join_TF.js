@@ -49,8 +49,8 @@ function autoPost(ID) {
           } else {
             $httpClient.post({ url: testurl + ID + '/accept', headers: header }, function (error, resp, body) {
               let jsonBody = JSON.parse(body)
-              $notification.post(jsonBody.data.name, 'TestFlight đã tham gia thành công', '')
-              console.log(jsonBody.data.name + ' TestFlight đã tham gia thành công')
+              $notification.post(jsonBody.data.name, 'TestFlight đã tham gia thành công.', '')
+              console.log(jsonBody.data.name + ' TestFlight đã tham gia thành công.')
               ids = $persistentStore.read('APP_ID').split(',')
               ids = ids.filter(ids => ids !== ID)
               $persistentStore.write(ids.toString(), 'APP_ID')
@@ -65,7 +65,7 @@ function autoPost(ID) {
       //     $notification.post('Tự động tham gia TestFlight', error, '')
       //     console.log(ID + ' ' + error)
       //     resolve()
-      //   }
+        // }
       }
     })
   })
