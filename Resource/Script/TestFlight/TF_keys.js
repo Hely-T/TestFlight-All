@@ -3,10 +3,11 @@ Script Author: DecoAri
 Fix Author: Hely-T
 Reference: https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/TF_keys.js
 Các bước sử dụng cụ thể
-1: Nhập trình cắm
-2: Vào trang Mitm để kích hoạt Mitm qua Http2
-3: Khởi động VPN, vào Ứng dụng TestFlight và hiển thị thông báo rằng quá trình thu thập thành công.
-4: Đi tới Cấu hình -> Dữ liệu liên tục -> Nhập dữ liệu đã chỉ định, điền APP_ID làm khóa và điền ID của TF bạn muốn tham gia làm giá trị, (ID là ký tự sau khi nối liên kết https://testflight.apple.com/join/LPQmtkUs String (nghĩa là "LPQmtkUs" trong ví dụ này)⚠️: hỗ trợ liên kết TF không giới hạn, mỗi liên kết cần phân tách bằng dấu phẩy tiếng Anh "," (chẳng hạn như: LPQmtkUs ,Hgun65jg,8yhJgv)
+- Nhập Plugin
+- Vào trang Mitm để kích hoạt và bật Mitm qua Http2
+- Vào Profile -> Data Persistence -> Import Data by key. Key= APP_ID, Value= (can be left blank)
+- Khởi động bật Loon và cho phép VPN, sau đó vào App TestFlight để kích hoạt Plugin
+- Đi tới Profile -> Plugin -> Chọn vào Script, trong mục APP_ID điền ID của TF bạn muốn tham gia làm giá trị, (ID là ký tự sau khi nối liên kết https://testflight.apple.com/join/LPQmtkUs String (nghĩa là "LPQmtkUs" trong ví dụ này)⚠️: hỗ trợ liên kết TF không giới hạn, mỗi liên kết cần phân tách bằng dấu phẩy "," (chẳng hạn như: LPQmtkUs ,Hgun65jg,8yhJgv)
 )
 */
 const reg1 = /^https:\/\/testflight\.apple\.com\/v3\/accounts\/(.*)\/apps$/;
