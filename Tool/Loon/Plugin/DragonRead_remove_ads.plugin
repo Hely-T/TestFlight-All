@@ -1,0 +1,51 @@
+#!name = 番茄小说去广告
+#!desc = 移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/DragonRead.png
+#!date = 2024-05-07 14:36:59
+
+[Rule]
+URL-REGEX, ^http:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/obj\/ad-app-package\/, REJECT
+AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, normal), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
+AND, ((DOMAIN-KEYWORD, gecko), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((DOMAIN-KEYWORD, minigame), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-KEYWORD, -alisc), (DOMAIN-KEYWORD, -aliec), (DOMAIN-KEYWORD, -bjlgy))), (DOMAIN-SUFFIX, snssdk.com)), REJECT
+DOMAIN, abtest3-misc.zijieapi.com, REJECT
+DOMAIN, bsync3-normal.zijieapi.com, REJECT
+DOMAIN, content-open.douyin.com, REJECT
+DOMAIN, dig.bdurl.net, REJECT
+DOMAIN, dig.zjurl.cn, REJECT
+DOMAIN, effect.snssdk.com, REJECT
+DOMAIN, feedback-c.zijieapi.com, REJECT
+DOMAIN, ichannel.snssdk.com, REJECT
+DOMAIN, is.snssdk.com, REJECT
+DOMAIN, lf-webcast-gr-sourcecdn.bytegecko.com, REJECT
+DOMAIN, lf3-reading.fqnovelstatic.com, REJECT
+DOMAIN, log5-applog.fqnovel.com, REJECT
+DOMAIN, mon11-misc.fqnovel.com, REJECT
+DOMAIN, mssdk.volces.com, REJECT
+DOMAIN, mssdk.zijieapi.com, REJECT
+DOMAIN, polaris.zijieapi.com, REJECT
+DOMAIN, reading.snssdk.com, REJECT
+DOMAIN, rtlog5-applog.fqnovel.com, REJECT
+DOMAIN, timon.zijieapi.com, REJECT
+DOMAIN, toutiao-frontier.snssdk.com, REJECT
+DOMAIN, ug.snssdk.com, REJECT
+DOMAIN, vcs.zijieapi.com, REJECT
+DOMAIN, webcast-open.douyin.com, REJECT
+DOMAIN, zlink.ugsdk.cn, REJECT
+
+[Rewrite]
+^https:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ reject
+^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/ reject
+^https:\/\/api-access\.pangolin-sdk-toutiao1\.com\/api\/ad\/ reject
+^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ reject
+
+# 域名解析
+^https:\/\/tnc3-alisc1\.zijieapi\.com\/get_domains\/ reject
+
+[Mitm]
+hostname = sf3-fe-tos.pglstatp-toutiao.com, tnc3-alisc1.zijieapi.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, lf-cdn-tos.bytescm.com
