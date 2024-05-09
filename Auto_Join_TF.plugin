@@ -13,7 +13,7 @@ DOMAIN, testflight.apple.com, PROXY
 [Script]
 http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/TF_keys.js, tag = Thu thập thông tin TestFlight
 http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/TF_keys.js, tag = Theo dõi số lượng TestFlight
-cron "*/1 * * * * *" script-path = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/Auto_join_TF.js, tag = Tự động tham gia TestFlight, timeout = 180
+cron "*/0,1 * * * * *" script-path = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/Auto_join_TF.js, tag = Tự động tham gia TestFlight, timeout = 180
 
 [Mitm]
 hostname = testflight.apple.com
