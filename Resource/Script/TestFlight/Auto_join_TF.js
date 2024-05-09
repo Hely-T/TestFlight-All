@@ -62,7 +62,7 @@ function autoPost(ID) {
         if (error == 'The request timed out.') {
           resolve()
         } else {
-          $notification.post('Tự động tham gia TestFlight', error, '')
+          // $notification.post('Tự động tham gia TestFlight', error, '')
           console.log(ID + ' ' + error)
           resolve()
         }
