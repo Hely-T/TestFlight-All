@@ -59,7 +59,7 @@ function autoPost(ID) {
           }
         }
       } else {
-        if (error == 'The request timed out.') {
+        if (error == 'Hết thời gian chờ.') {
           resolve()
         } else {
           $notification.post('Tự động tham gia TestFlight', error, '')
