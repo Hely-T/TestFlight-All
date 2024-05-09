@@ -1,12 +1,12 @@
 /*
-脚本作者：DecoAri
-引用地址：https://github.com/DecoAri/JavaScript/blob/main/Surge/TF_keys.js
-具体使用步骤
-1: 导入插件
-2: 到Mitm页面启用 Mitm over Http2
-3: 启动VPN，进入到TestFlight App，显示通知信息获取成功
-4: 到配置-> 持久化数据 -> 导入指定数据  key填写APP_ID，value填写你要加入的TF的ID，（ID为链接 https://testflight.apple.com/join/LPQmtkUs 的join后的字符串（也就是此例子的“LPQmtkUs”）⚠️：支持无限个TF链接，每个链接需要用英文逗号“,”隔开（如： LPQmtkUs,Hgun65jg,8yhJgv）
-）
+Tác giả kịch bản: Hely-T
+Địa chỉ tham khảo: https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/TF_keys.js
+Các bước sử dụng cụ thể
+1: Nhập trình cắm
+2: Vào trang Mitm để kích hoạt Mitm qua Http2
+3: Khởi động VPN, vào Ứng dụng TestFlight và hiển thị thông báo rằng quá trình thu thập thành công.
+4: Đi tới Cấu hình -> Dữ liệu liên tục -> Nhập dữ liệu đã chỉ định, điền APP_ID làm khóa và điền ID của TF bạn muốn tham gia làm giá trị, (ID là ký tự sau khi nối liên kết https://testflight.apple.com/join/LPQmtkUs String (nghĩa là "LPQmtkUs" trong ví dụ này)⚠️: hỗ trợ liên kết TF không giới hạn, mỗi liên kết cần phân tách bằng dấu phẩy tiếng Anh "," (chẳng hạn như: LPQmtkUs ,Hgun65jg,8yhJgv)
+)
 */
 const reg1 = /^https:\/\/testflight\.apple\.com\/v3\/accounts\/(.*)\/apps$/;
 const reg2 = /^https:\/\/testflight\.apple\.com\/join\/(.*)/;
@@ -25,10 +25,10 @@ if (reg1.test($request.url)) {
     $persistentStore.write(ua, 'tf_ua')
     console.log($request.headers)
     if ($persistentStore.read('request_id') !== null) {
-      $notification.post('TF信息获取', '信息获取成功，请关闭脚本！','')
+      $notification.post('TF thu thập thông tin', 'Thu thập thông tin thành công, vui lòng đóng tập lệnh!','')
 
     } else {
-      $notification.post('TF信息获取','信息获取失败，请打开Mitm over HTTP2开关，并重启VPN和TestFlight App！','')
+      $notification.post('Thu thập thông tin TF', 'Việc thu thập thông tin không thành công, vui lòng bật chuyển đổi Mitm qua HTTP2 và khởi động lại VPN và Ứng dụng TestFlight! ','')
     }
     $done({})
 }
@@ -45,7 +45,7 @@ if (reg2.test($request.url)) {
     appId = arr.join(",");
   }
   $persistentStore.write(appId, "APP_ID");
-  $notification.post("TestFlight自动加入", `已添加APP_ID: ${id}`, `当前ID: ${appId}`);
+  $notification.post("TestFlight Tự động tham gia", `APP_ID đã được thêm: ${id}`, `ID hiện tại: ${appId}`);
   $done({})
 }
 function unique(arr) {
