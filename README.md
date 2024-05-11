@@ -18,6 +18,9 @@
 - Qua Modules -> New Local Module -> Dán toàn bộ code đã copy được vào -> Done -> Đặt name tuỳ chỉnh -> OK
 - Vẫn trong mục Module -> Ấn 3 chấm cạnh plugin vừa thêm ->  Edit Content -> Xoá 2 dấu gạch dưới script -> Done -> Click vào Script để bật lên -> Done
 - Bật HTTP Capture -> Start Sugar5 -> Vào TF để lấy thông tin -> Lấy xong vào lại Plugin -> Edit Content -> Ở mục nãy xoá // ta tên dấu # vào -> Done, -> Sau đó tắt HTTP Capture 
+- Vào mục Scripting -> Editor -> Click vào bánh răng -> $persistentStore -> Nếu chưa có APP_ID thì bấm vào dấu + và thêm mục tên APP_ID, nếu đã có rồi thì qua bước mới.
+- Click vào APP_ID và điền ID các app TestFlight cần auto. Ngăn cách nhau bằng dấu "," và viết liền không cách.
+- => Kiểm tra lịch sử ở Utilities -> Logs
 
 ### Lời tâm sự
 - Đây là một dự án được tôi Dịch lại và đã fix những lỗi vặt, các bạn yêu quý có thể sử dụng. Cảm ơn vì đã tin tưởng!
