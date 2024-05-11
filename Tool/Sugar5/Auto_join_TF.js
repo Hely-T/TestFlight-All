@@ -145,9 +145,9 @@ async function autoPost(ID, ids) {
                     ids.splice(ids.indexOf(ID), 1)
                     $persistentStore.write(ids.join(','), 'APP_ID')
                     if (ids.length > 0) {
-                        $notification.post(jsonBody.data.name + ' TestFlightĐã tham gia thành công', '', `Tiếp tục thực hiện APP ID：${ids.join(',')}`, {"sound": true})
+                        $notification.post(jsonBody.data.name + ' TestFlight Đã tham gia thành công', '', `Tiếp tục thực hiện APP ID：${ids.join(',')}`, {"sound": true})
                     } else {
-                        $notification.post(jsonBody.data.name + ' TestFlightĐã tham gia thành công', '', 'Tất cả ID ứng dụng đã được xử lý', {"sound": true})
+                        $notification.post(jsonBody.data.name + ' TestFlight Đã tham gia thành công', '', 'Tất cả ID ứng dụng đã được xử lý', {"sound": true})
                     }
                 } else {
                     console.log(`${ID} Không thể tham gia: ${error || `mã trạng thái ${response.status}`}，Lưu trữ APP_ID`)

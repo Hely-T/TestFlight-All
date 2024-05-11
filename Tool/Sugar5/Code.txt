@@ -1,5 +1,5 @@
 #!name=❏ Auto TestFlight
-#!desc=Tự động tham gia ứng dụng TF beta công khai và đóng mô-đun Scriptnày
+#!desc=Tự động tham gia ứng dụng TF beta công khai và đóng mô-đun Script này
 #!system=ios
 #!category=Third Party Module
 #!arguments=INFO_FETCH_SCRIPT_NAME:Truy cập thông tin,CRON_SECONDS:1,START_HOUR:0,END_HOUR:23

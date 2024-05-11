@@ -13,7 +13,7 @@
 
 ### Cách sử dụng Sugar5
 
-- Vào MitM - Chọn Hostname -> add testflight.appl.com -> Done
+- Vào MitM - Chọn Hostname -> add testflight.apple.com -> Done
 - Vào https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Sugar5/Code.txt và copy toàn bộ code
 - Qua Modules -> New Local Module -> Dán toàn bộ code đã copy được vào -> Done -> Đặt name tuỳ chỉnh -> OK -> Click vào Script để bật lên -> Done
 - Bật HTTP Capture -> Start Sugar5 -> Vào TF để lấy thông tin -> Lấy xong vào lại Plugin -> 3 gạch -> Edit Content 
