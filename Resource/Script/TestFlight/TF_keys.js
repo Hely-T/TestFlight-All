@@ -1,7 +1,7 @@
 /*
 Script Author: DecoAri
 Fix Author: Hely-T
-Reference: https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/TF_keys.js
+Reference: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/TF_keys.js
 Các bước sử dụng cụ thể
 - Nhập Plugin
 - Vào trang Mitm để kích hoạt và bật Mitm qua Http2

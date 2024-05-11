@@ -1,7 +1,7 @@
 /*
 Script Author: DecoAri
 Fix Author: Hely-T
-Reference: https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/Auto_join_TF.js
+Reference: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/Auto_join_TF.js
 Thanks to a great person for adapting this script into Loon version!
 */
 !(async () => {

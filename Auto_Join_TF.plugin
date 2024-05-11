@@ -2,8 +2,8 @@
 #!desc = Tự động theo dõi số lượng TestFlight và tự động tham gia ngay khi có sẵn.
 #!openUrl = 
 #!author = Hely-T
-#!homepage = https://github.com/Hely-T/Loon/tree/master/Tool/Loon/Plugin
-#!icon = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/PNG/TestFlight.png
+#!homepage = https://github.com/Hely-T/TestFlight-All/tree/master/Tool/Loon/Plugin
+#!icon = https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/PNG/TestFlight.png
 #!input = APP_ID
 #!date = 2024-05-09 20:00:30
 
@@ -11,9 +11,9 @@
 DOMAIN, testflight.apple.com, PROXY
 
 [Script]
-http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/TF_keys.js, tag = Thu thập thông tin TestFlight
-http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/TF_keys.js, tag = Theo dõi số lượng TestFlight
-cron "*/1 * * * * *" script-path = https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/Script/TestFlight/Auto_join_TF.js, tag = Tự động tham gia TestFlight, timeout = 180
+http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/TF_keys.js, tag = Thu thập thông tin TestFlight
+http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/TF_keys.js, tag = Theo dõi số lượng TestFlight
+cron "*/1 * * * * *" script-path = https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/Auto_join_TF.js, tag = Tự động tham gia TestFlight, timeout = 180
 
 [Mitm]
 hostname = testflight.apple.com
