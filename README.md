@@ -7,8 +7,8 @@
 
 - Nhập Plugin (https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Auto_Join_TF.plugin)
 - Vào trang Mitm để kích hoạt và bật Mitm qua Http2
-- Vào Profile -> Data Persistence -> Import Data by key. Key= APP_ID, Value= (can be left blank) (Nếu đã nhập plugin trước có APP_ID thì k cần thêm nữa)
-- Khởi động bật Loon và cho phép VPN, sau đó vào App TestFlight để kích hoạt Plugin
+- Vào Profile -> Data Persistence -> Import Data by key. Key= APP_ID, Value= (Có thể bỏ trống) - (Nếu đã nhập plugin trước có APP_ID thì k cần thêm nữa)
+- Tick bật Script ở Profile lên -> Khởi động bật Loon và cho phép VPN, sau đó vào App TestFlight để kích hoạt Plugin
 - Đi tới Profile -> Plugin -> Chọn vào Script, trong mục APP_ID điền ID của TF bạn muốn tham gia làm giá trị, (ID là ký tự sau khi nối liên kết https://testflight.apple.com/join/LPQmtkUs String (nghĩa là "LPQmtkUs" trong ví dụ này)⚠️: hỗ trợ liên kết TF không giới hạn, mỗi liên kết cần phân tách bằng dấu phẩy "," (chẳng hạn như: LPQmtkUs ,Hgun65jg,8yhJgv)
 )
 
