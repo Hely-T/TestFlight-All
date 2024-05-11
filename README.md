@@ -31,4 +31,4 @@
 
 ### Lời kết:
 
-- Khi nào tôi APPLE ID Để tải Quantumult X với Stash thì mình sẽ Việt Hoá các file đó sau. Do hiện tại cũng chưa có app nên không thể test và check lỗi được, mong mọi người thông cảm !!!
+- Khi nào tôi có APPLE ID Để tải Quantumult X với Stash thì mình sẽ Việt Hoá các file đó sau. Do hiện tại cũng chưa có app nên không thể test và check lỗi được, mong mọi người thông cảm !!!
