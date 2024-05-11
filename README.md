@@ -24,6 +24,11 @@
 - => Kiểm tra lịch sử ở Utilities -> Logs
 
 ### Lời tâm sự
+
 - Đây là một bộ source được tôi fork từ bên Trung Quốc về và đã Việt Hoá lại (Loon,Surge)
 - Loon tôi đã fix thông báo httpconnect (Không thông báo liên tục khi kết nối yếu nữa)
 - Surge tôi đã update Auto Setup Name + Auto Cron. Mọi người chỉ cần làm theo hướng dẫn và sử dụng
+
+### Lời kết:
+
+- Khi nào tôi APPLE ID Để tải Quantumult X với Stash thì mình sẽ Việt Hoá các file đó sau. Do hiện tại cũng chưa có app nên không thể test và check lỗi được, mong mọi người thông cảm !!!
