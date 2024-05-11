@@ -16,7 +16,7 @@
 
 - Vào MitM - Chọn Hostname -> add: testflight.apple.com -> Done
 - Vào https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Surge5/Code.txt và copy toàn bộ code
-- Qua Modules -> New Local Module -> Dán toàn bộ code đã copy được vào -> Done -> Đặt name tuỳ chỉnh -> OK -> Click vào Script để bật lên -> Done
+- Qua Modules -> New Local Module -> Dán toàn bộ code đã copy được vào -> Done -> Đặt name bất kì (Vì tôi đã setup name auto lên đặt tên như nào cũng được) -> OK -> Click vào Script để bật lên -> Done
 - Bật HTTP Capture -> Start Surge -> Vào TF để lấy thông tin -> Lấy xong vào lại Plugin -> 3 gạch -> Edit Content 
 - Ở dưới Script ta thêm # vào đầu ( tức là trước {{{INFO_FETCH_SCRIPT_NAME}}} - Dạng: #{{{INFO_FETCH_SCRIPT_NAME}}} ) -> Done, -> Sau đó tắt HTTP Capture 
 - Vào mục Scripting -> Editor -> Click vào bánh răng -> $persistentStore -> Nếu chưa có APP_ID thì bấm vào dấu + và thêm mục tên APP_ID, nếu đã có rồi thì qua bước mới.
@@ -24,4 +24,6 @@
 - => Kiểm tra lịch sử ở Utilities -> Logs
 
 ### Lời tâm sự
-- Đây là một dự án được tôi Dịch lại và đã fix những lỗi vặt, các bạn yêu quý có thể sử dụng. Cảm ơn vì đã tin tưởng!
+- Đây là một bộ source được tôi fork từ bên Trung Quốc về và đã Việt Hoá lại (Loon,Surge)
+- Loon tôi đã fix thông báo httpconnect (Không thông báo liên tục khi kết nối yếu nữa)
+- Surge tôi đã update Auto Setup Name + Auto Cron. Mọi người chỉ cần làm theo hướng dẫn và sử dụng
