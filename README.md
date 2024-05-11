@@ -13,7 +13,7 @@
 
 ### Cách sử dụng Sugar5
 
-#!name=❏ Auto TestFlight /n
+#!name=❏ Auto TestFlight \n
 #!desc=Tự động tham gia ứng dụng TF beta công khai và đóng mô-đun Scriptnày
 #!system=ios
 #!category=Third Party Module
