@@ -11,12 +11,12 @@
 - Đi tới Profile -> Plugin -> Chọn vào Script, trong mục APP_ID điền ID của TF bạn muốn tham gia làm giá trị, (ID là ký tự sau khi nối liên kết https://testflight.apple.com/join/LPQmtkUs String (nghĩa là "LPQmtkUs" trong ví dụ này)⚠️: hỗ trợ liên kết TF không giới hạn, mỗi liên kết cần phân tách bằng dấu phẩy "," (chẳng hạn như: LPQmtkUs ,Hgun65jg,8yhJgv)
 )
 
-### Cách sử dụng Sugar5
+### Cách sử dụng Suger5
 
 - Vào MitM - Chọn Hostname -> add testflight.apple.com -> Done
 - Vào https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Sugar5/Code.txt và copy toàn bộ code
 - Qua Modules -> New Local Module -> Dán toàn bộ code đã copy được vào -> Done -> Đặt name tuỳ chỉnh -> OK -> Click vào Script để bật lên -> Done
-- Bật HTTP Capture -> Start Sugar5 -> Vào TF để lấy thông tin -> Lấy xong vào lại Plugin -> 3 gạch -> Edit Content 
+- Bật HTTP Capture -> Start Suger -> Vào TF để lấy thông tin -> Lấy xong vào lại Plugin -> 3 gạch -> Edit Content 
 - Ở dưới Script ta thêm # vào đầu ( tức là trước {{{INFO_FETCH_SCRIPT_NAME}}} - Dạng: #{{{INFO_FETCH_SCRIPT_NAME}}} ) -> Done, -> Sau đó tắt HTTP Capture 
 - Vào mục Scripting -> Editor -> Click vào bánh răng -> $persistentStore -> Nếu chưa có APP_ID thì bấm vào dấu + và thêm mục tên APP_ID, nếu đã có rồi thì qua bước mới.
 - Click vào APP_ID và điền ID các app TestFlight cần auto. Ngăn cách nhau bằng dấu "," và viết liền không cách.
