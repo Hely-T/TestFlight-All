@@ -1,4 +1,4 @@
-### Scipt Auto Join TestFlight
+### Script Auto Join TestFlight
 
 - Không sử dụng proxy để tải xuống tệp
 
