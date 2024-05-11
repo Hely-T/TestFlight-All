@@ -1,7 +1,7 @@
 ### Cách sử dụng Suger
 
 - Vào MitM - Chọn Hostname -> add testflight.apple.com -> Done
-- Vào https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Sugar5/Code.txt và copy toàn bộ code
+- Vào https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Suger5/Code.txt và copy toàn bộ code
 - Qua Modules -> New Local Module -> Dán toàn bộ code đã copy được vào -> Done -> Đặt name tuỳ chỉnh -> OK
 - Vẫn trong mục Module -> Ấn 3 chấm cạnh plugin vừa thêm ->  Edit Content -> Xoá 2 dấu gạch dưới script -> Done -> Click vào Script để bật lên -> Done
 - Bật HTTP Capture -> Start Suger -> Vào TF để lấy thông tin -> Lấy xong vào lại Plugin -> Edit Content -> Ở mục nãy xoá // ta tên dấu # vào -> Done, -> Sau đó tắt HTTP Capture 

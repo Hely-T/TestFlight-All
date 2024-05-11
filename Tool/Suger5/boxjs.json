@@ -150,7 +150,7 @@
       ],
       "author": "@Hely-T",
       "repo": "https://github.com/Hely-T/TestFlight-All/",
-      "script": "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Sugar5/xmSports.js",
+      "script": "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Suger5/xmSports.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
@@ -496,7 +496,7 @@
   "id": "Auto_join_TF",
   "name": "TestFlight",
   "author": "@Hely-T",
-  "script": "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Sugar5/Auto_join_TF.js",
+  "script": "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Suger5/Auto_join_TF.js",
   "icons": [
     "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/PNG/TestFlight.png",
     "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/PNG/TestFlight.png"
