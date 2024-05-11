@@ -1,10 +1,10 @@
 /*
-更新时间：2024.04.11 10:40
-更新内容：新增按通知类别保留或延迟消失,模块关闭提示音(SurgeTF参数)
+Thời gian cập nhật: 2024.05.11 10:40
+Nội dung được cập nhật: Đã thêm tính năng lưu giữ hoặc biến mất chậm theo danh mục thông báo, âm thanh nhắc đóng mô-đun (tham số SurgeTF)
 
-Surge配置
+Sugar5
 https://raw.githubusercontent.com/githubdulong/Script/master/Surge/AUTOTF.sgmodule
-Boxjs订阅
+BoxJS
 https://raw.githubusercontent.com/githubdulong/Script/master/boxjs.json
 */
 
@@ -21,14 +21,14 @@ if (typeof $request !== 'undefined' && $request) {
             if (!appIdSet.has(appId)) {
                 appIdSet.add(appId)
                 $persistentStore.write(Array.from(appIdSet).join(','), 'APP_ID')
-                $notification.post('已捕获APP_ID', '', `已捕获并存储APP_ID: ${appId}`, {"auto-dismiss": 2})
-                console.log(`已捕获并存储APP_ID: ${appId}`)
+                $notification.post('APP_ID đã không còn', '', `APP_ID đã được chụp và lưu trữ: ${appId}`, {"auto-dismiss": 2})
+                console.log(`APP_ID đã được chụp và lưu trữ: ${appId}`)
             } else {
-                $notification.post('APP_ID重复', '', `APP_ID: ${appId} 已存在，无需重复添加。` , {"auto-dismiss": 2})
-                console.log(`APP_ID: ${appId} 已存在，无需重复添加。`)
+                $notification.post('APP_ID bị trùng lặp', '', `APP_ID: ${appId} Nó đã tồn tại rồi, không cần thêm lại.` , {"auto-dismiss": 2})
+                console.log(`APP_ID: ${appId} Nó đã tồn tại rồi, không cần thêm lại.`)
             }
         } else {
-            console.log('未捕获到有效的TestFlight APP_ID')
+            console.log('Không có APP_ID TestFlight hợp lệ nào được ghi lại')
         }
     }
     if (/^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$/.test(url) && key) {
@@ -44,9 +44,9 @@ if (typeof $request !== 'undefined' && $request) {
 
         let existingAppIds = $persistentStore.read('APP_ID')
         if (!existingAppIds) {
-            $notification.post('信息获取成功 🎉', '', '请获取APP_ID后编辑模块参数停用该脚本' , {"auto-dismiss": 10})
+            $notification.post('Thông tin thu được thành công 🎉', '', 'Vui lòng lấy APP_ID và chỉnh sửa các tham số mô-đun để tắt tập lệnh.' , {"auto-dismiss": 10})
         }
-        console.log(`信息获取成功: session_id=${session_id}, session_digest=${session_digest}, request_id=${request_id}, key=${key}`)
+        console.log(`Thông tin thu được thành công: session_id=${session_id}, session_digest=${session_digest}, request_id=${request_id}, key=${key}`)
     } else if (/^https:\/\/testflight\.apple\.com\/join\/([A-Za-z0-9]+)$/.test(url)) {
         const appIdMatch = url.match(/^https:\/\/testflight\.apple\.com\/join\/([A-Za-z0-9]+)$/)
         handler(appIdMatch)
@@ -60,7 +60,7 @@ if (typeof $request !== 'undefined' && $request) {
     !(async () => {
         let ids = $persistentStore.read('APP_ID')
         if (!ids) {
-            console.log('未检测到APP_ID')
+            console.log('APP_ID không được phát hiện')
             $done()
         } else {
             ids = ids.split(',')
@@ -68,8 +68,8 @@ if (typeof $request !== 'undefined' && $request) {
                 await autoPost(ID, ids)
             }
             if (ids.length === 0) {
-                $notification.post('所有TestFlight已加入完毕 🎉', '', '模块已自动关闭停止运行', {"sound": true});
-                $done($httpAPI('POST', '/v1/modules', {'公测监控': false}));
+                $notification.post('Tất cả các ID TestFlight đã được thêm vào 🎉', '', 'Mô-đun đã tự động tắt và ngừng chạy.', {"sound": true});
+                $done($httpAPI('POST', '/v1/modules', {'Giám sát beta công khai': false}));
             } else {
                 $done()
             }
@@ -89,22 +89,22 @@ async function autoPost(ID, ids) {
     return new Promise((resolve) => {
         $httpClient.get({ url: testurl + ID, headers: header }, (error, response, data) => {
             if (error) {
-                console.log(`${ID} 网络请求失败: ${error}，保留 APP_ID`);
+                console.log(`${ID} Yêu cầu mạng không thành công: ${error}，Lưu trữ APP_ID`);
                 resolve();
                 return;
             }
 
             if (response.status === 500) {
-                console.log(`${ID} 服务器错误，状态码 500，保留 APP_ID`);
+                console.log(`${ID} Lỗi máy chủ, mã trạng thái 500，Lưu trữ APP_ID`);
                 resolve();
                 return
             }
 
             if (response.status !== 200) {
-                console.log(`${ID} 不是有效链接: 状态码 ${response.status}，移除 APP_ID`)
+                console.log(`${ID} Không phải là một liên kết hợp lệ: mã trạng thái ${response.status}，Di dời APP_ID`)
                 ids.splice(ids.indexOf(ID), 1)
                 $persistentStore.write(ids.join(','), 'APP_ID')
-                $notification.post('不是有效的TestFlight链接', '', `${ID} 已被移除` , {"auto-dismiss": 2})
+                $notification.post('Không phải là liên kết TestFlight hợp lệ', '', `${ID} đã bị loại bỏ` , {"auto-dismiss": 2})
                 resolve()
                 return
             }
@@ -113,19 +113,19 @@ async function autoPost(ID, ids) {
             try {
                 jsonData = JSON.parse(data)
             } catch (parseError) {
-                console.log(`${ID} 响应解析失败: ${parseError}，保留 APP_ID`)
+                console.log(`${ID} Phân tích phản hồi không thành công: ${parseError}，Lưu trữ APP_ID`)
                 resolve()
                 return
             }
 
             if (!jsonData || !jsonData.data) {
-                console.log(`${ID} 无法接受邀请，保留 APP_ID`)
+                console.log(`${ID} Không thể chấp nhận lời mời，Lưu trữ APP_ID`)
                 resolve()
                 return
             }
 
             if (jsonData.data.status === 'FULL') {
-                console.log(`${ID} 测试已满，保留 APP_ID`)
+                console.log(`${ID} Ứng đụng đã đầy，Lưu trữ APP_ID`)
                 resolve()
                 return
             }
@@ -136,21 +136,21 @@ async function autoPost(ID, ids) {
                     try {
                         jsonBody = JSON.parse(body)
                     } catch (parseError) {
-                        console.log(`${ID} 加入请求响应解析失败: ${parseError}，保留 APP_ID`)
+                        console.log(`${ID} Yêu cầu tham gia đã đầy, phân tích phản hồi không thành công: ${parseError}，Lưu trữ APP_ID`)
                         resolve()
                         return
                     }
 
-                    console.log(`${jsonBody.data.name} TestFlight加入成功`)
+                    console.log(`${jsonBody.data.name} TestFlightĐã tham gia thành công`)
                     ids.splice(ids.indexOf(ID), 1)
                     $persistentStore.write(ids.join(','), 'APP_ID')
                     if (ids.length > 0) {
-                        $notification.post(jsonBody.data.name + ' TestFlight加入成功', '', `继续执行APP ID：${ids.join(',')}`, {"sound": true})
+                        $notification.post(jsonBody.data.name + ' TestFlightĐã tham gia thành công', '', `Tiếp tục thực hiện APP ID：${ids.join(',')}`, {"sound": true})
                     } else {
-                        $notification.post(jsonBody.data.name + ' TestFlight加入成功', '', '所有APP ID处理完毕', {"sound": true})
+                        $notification.post(jsonBody.data.name + ' TestFlightĐã tham gia thành công', '', 'Tất cả ID ứng dụng đã được xử lý', {"sound": true})
                     }
                 } else {
-                    console.log(`${ID} 加入失败: ${error || `状态码 ${response.status}`}，保留 APP_ID`)
+                    console.log(`${ID} Không thể tham gia: ${error || `mã trạng thái ${response.status}`}，Lưu trữ APP_ID`)
                 }
                 resolve()
             })
