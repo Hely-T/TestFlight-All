@@ -1,6 +1,7 @@
 ### Script Auto Join TestFlight
 
 - Không sử dụng proxy để tải xuống tệp
+- Vui lòng cài Certificate và Trust trong cài đặt chung máy trước khi sử dụng
 
 ### Cách sử dụng Loon
 
