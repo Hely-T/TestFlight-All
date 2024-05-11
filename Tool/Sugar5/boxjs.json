@@ -1,0 +1,524 @@
+{
+  "id": "githubdulong.app.sub",
+  "name": "Githubdulong 脚本订阅",
+  "author": "@MuTu888",
+  "icon": "https://raw.githubusercontent.com/githubdulong/Script/master/Images/MuTu.PNG",
+  "repo": "https://github.com/githubdulong/Script",
+  "apps": [
+    {
+      "id": "jf",
+      "name": "京粉转链",
+      "desc_html": "<font class=\"green--text\">在京东比价中增加京粉转链，如显示有转链信息（即使显示无详细返利信息）则可点击跳转跟单，如未显示返利信息则为未参加推广的商品，不会跳转。</font>",
+      "keys": [
+        "jfCookie",
+        "jfUseConvert",
+        "jfAutoScheme",
+        "jfusejsapp",
+        "jfChooseScheme",
+        "chooseBrowser",
+        "jfDIYScheme"
+      ],
+      "settings": [
+        {
+          "id": "jfUseConvert",
+          "name": "开启转链",
+          "val": "true",
+          "type": "boolean",
+          "desc": "是否开启京粉转链？"
+        },
+        {
+          "id": "jfAutoScheme",
+          "name": "自动目标",
+          "val": "true",
+          "type": "boolean",
+          "desc": "开启后如转链成功有返利，点击通知跳转正在使用的 app，关闭则跳转自选的 app。"
+        },
+        {
+          "id": "jfChooseScheme",
+          "name": "自选目标",
+          "val": "jd",
+          "type": "radios",
+          "desc": "自选跳转的 app，仅在自动目标关闭时有效。",
+          "items": [
+            {
+              "key": "jd",
+              "label": "京东"
+            },
+            {
+              "key": "jx",
+              "label": "京喜"
+            },
+            {
+              "key": "jk",
+              "label": "京东健康"
+            },
+            {
+              "key": "js",
+              "label": "京东极速版"
+            },
+            {
+              "key": "browser",
+              "label": "浏览器"
+            }
+          ]
+        },
+        {
+          "id": "jfusejsapp",
+          "name": "京东极速版使用 app",
+          "val": "false",
+          "type": "boolean",
+          "desc": "开启时对目标为京东极速版则跳转京东极速版，关闭则跳转浏览器，默认关闭。注意：即使开启，由于极速版 URL Scheme 问题，跳转后只能先加入购物车，返回原购物车界面进行结账，否则无法使用极速版优惠券。"
+        },
+        {
+          "id": "chooseBrowser",
+          "name": "浏览器目标",
+          "val": "Safari",
+          "type": "radios",
+          "desc": "自选跳转的浏览器。",
+          "items": [
+            {
+              "key": "Safari",
+              "label": "Safari"
+            },
+            {
+              "key": "Alook",
+              "label": "Alook"
+            },
+            {
+              "key": "DIY",
+              "label": "自定义"
+            }
+          ]
+        },
+        {
+          "id": "jfDIYScheme",
+          "name": "自定义浏览器",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "Foxok://url?",
+          "autoGrow": "true",
+          "rows": 2,
+          "desc": "自定义跳转浏览器 URL Scheme，拼接后会是 diy+convertURL，如 Foxok://url?convertURL"
+        },
+        {
+          "id": "jfCookie",
+          "name": "Cookie",
+          "type": "textarea",
+          "autoGrow": "true",
+          "rows": 2,
+          "desc": "使用京粉的京东账号 Cookie，如不填则为京东系脚本中的第一个 Cookie。"
+        }
+      ],
+      "author": "@MuTu888",
+      "repo": "https://github.com/githubdulong/Script",
+      "icons": [
+        "https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/eb/a8/f6/eba8f63a-b550-4586-b5d3-f22c0718ef81/source/100x100bb.jpg",
+        "https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/eb/a8/f6/eba8f63a-b550-4586-b5d3-f22c0718ef81/source/100x100bb.jpg"
+      ]
+    },
+
+    {
+      "id": "xmYd",
+      "name": "小米运动",
+      "keys": [
+        "xmSportsToken",
+        "xmMinStep",
+        "xmMaxStep"
+      ],
+      "settings": [
+        {
+          "id": "xmYdToken",
+          "name": "小米运动Token",
+          "val": "",
+          "type": "text",
+          "desc": "小米运动登录时获取的token"
+        },
+        {
+          "id": "xmMinStep",
+          "name": "最小运动步数",
+          "val": "19000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:19000"
+        },
+        {
+          "id": "xmMaxStep",
+          "name": "最大运动步数",
+          "val": "25000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:25000"
+        }
+      ],
+      "author": "@MuTu888",
+      "repo": "https://github.com/githubdulong/Script",
+      "script": "https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
+      ]
+    },
+    {
+      "id": "jd.wskeyupload",
+      "name": "Wskey配置",
+      "keys": [
+        "TGBotToken",
+        "TGUserIDs"
+      ],
+      "author": "@MuTu888",
+      "repo": "https://github.com/githubdulong/Script",
+      "icons": [
+        "https://raw.githubusercontent.com/id77/QuantumultX/master/icon/link.png",
+        "https://raw.githubusercontent.com/id77/QuantumultX/master/icon/link.png"
+      ],
+      "settings": [
+        {
+          "id": "TGBotToken",
+          "name": "Telegram机器人token",
+          "val": "",
+          "type": "text",
+          "desc": "bot token,数组格式保存 123456:xxx_xxx"
+        },
+        {
+          "id": "TGUserIDs",
+          "name": "wskey发送目标Id",
+          "val": "",
+          "type": "text",
+          "desc": "wskey发送目标Id,数组格式保存 [\"123456789\"]"
+        }
+      ]
+    },
+    {
+      "id": "lkJdHelper",
+      "name": "京东助手",
+      "desc_html": "<font class=\"red--text\">注:私人使用,或自己折腾KEY</font>",
+      "icons": [
+        "https://raw.githubusercontent.com/anker1209/icon/main/jdsc.png",
+        "https://raw.githubusercontent.com/anker1209/icon/main/jdsc.png"
+      ],
+      "keys": [
+        "lkJdHelperLeftCss",
+        "lkJdHelperRightCss",
+        "lkJdHelperSmzdmCss",
+        "lkJdHelperJfCss",
+        "lkJdHelperSidebarHorizontal",
+        "lkJdHelperCk",
+        "lkJdHelperCallKey"
+      ],
+      "settings": [
+        {
+          "id": "lkJdHelperSidebarHorizontal",
+          "name": "京东助手显示位置",
+          "val": "left",
+          "type": "radios",
+          "items": [
+            {
+              "key": "left",
+              "label": "左边"
+            },
+            {
+              "key": "right",
+              "label": "右边"
+            }
+          ],
+          "desc": "默认-左边"
+        },
+        {
+          "id": "lkJdHelperLeftCss",
+          "name": "助手left样式，决定左右",
+          "val": "",
+          "type": "text",
+          "desc": "助手left样式，决定左右"
+        },
+        {
+          "id": "lkJdHelperRightCss",
+          "name": "助手right样式，决定左右",
+          "val": "",
+          "type": "text",
+          "desc": "助手right样式，决定左右"
+        },
+        {
+          "id": "lkJdHelperSmzdmCss",
+          "name": "助手smzdm样式",
+          "val": "",
+          "type": "text",
+          "desc": "助手smzdm样式"
+        },
+        {
+          "id": "lkJdHelperJfCss",
+          "name": "助手jf样式",
+          "val": "",
+          "type": "text",
+          "desc": "助手jf样式"
+        },
+        {
+          "id": "lkJdHelperMmmCss",
+          "name": "助手Mmm样式",
+          "val": "",
+          "type": "text",
+          "desc": "助手Mmm样式"
+        },
+        {
+          "id": "lkJdHelperCk",
+          "name": "ck",
+          "val": "",
+          "type": "text",
+          "desc": "用于京粉转链的ck，格式：pt_key=xxx;pt_pin=xxx;wskey=xxx;"
+        },
+        {
+          "id": "lkJdHelperApiDomain",
+          "name": "接口url",
+          "val": "",
+          "type": "text",
+          "desc": "用于京粉转链请求的接口"
+        },
+        {
+          "id": "lkJdHelperCallKey",
+          "name": "调用接口的callKey",
+          "val": "",
+          "type": "text",
+          "desc": "用于京粉转链请求接口的callKey"
+        },
+        {
+          "id": "lkJdHelperIsNotifyKey",
+          "name": "是否显示通知",
+          "val": "false",
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "jdHelperIsShowSmzdm",
+          "name": "是否显示什么值得买按钮",
+          "val": "true",
+          "type": "boolean",
+          "desc": "默认显示"
+        },
+        {
+          "id": "jdHelperIsShowJf",
+          "name": "是否显示京粉按钮",
+          "val": "true",
+          "type": "boolean",
+          "desc": "默认显示"
+        },
+        {
+          "id": "jdHelperIsShowMmm",
+          "name": "是否显示慢慢买按钮",
+          "val": "true",
+          "type": "boolean",
+          "desc": "默认显示"
+        }
+      ],
+      "author": "@lowking@MuTu888",
+      "repo": "https://github.com/githubdulong/Script"
+    },
+    {
+      "id": "mtmc",
+      "name": "美团买菜",
+      "keys": [
+        "jojo_mall_meituan"
+      ],
+      "settings": [
+        {
+          "id": "jojo_mall_meituan",
+          "name": "美团买菜Token",
+          "val": "",
+          "type": "text",
+          "placeholder": "",
+          "autoGrow": "true",
+          "rows": 2,
+          "desc": "美团买菜Token"
+        }
+      ],
+      "author": "@JoJoJotarou@MuTu888",
+      "repo": "https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js",
+      "script": "https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js",
+      "icons": [
+        "https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/icon/mall.meituan.png",
+        "https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/icon/mall.meituan.png"
+      ]
+    },
+    {
+      "id": "feng.com",
+      "name": "威锋论坛",
+      "author": "@FoKit@Xiaobailian",
+      "script": "https://raw.githubusercontent.com/githubdulong/Script/master/weifeng.js",
+      "descs_html": [
+        ""
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/feng.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/feng.png"
+      ],
+      "keys": [
+        "feng_username",
+        "feng_password",
+        "feng_txt",
+        "feng_model",
+        "feng_token"
+      ],
+      "settings": [
+        {
+          "id": "feng_username",
+          "name": "账号",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "feng_password",
+          "name": "密码",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "feng_txt",
+          "name": "心情动态",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "feng_model",
+          "name": "设备型号",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "feng_token",
+          "name": "Token",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "chinatelecomEnquiry",
+      "name": "天翼数据",
+      "author": "@MuTu888",
+      "script": "",
+      "desc_html": "<font class=\"purple--text\">天翼账号中心App老数据,仅作备份提供予Scriptable</font>",
+      "icons": [
+        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/telecominfinty.png",
+        "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/telecominfinty.png"
+      ],
+      "keys": [
+        "china_telecom_authToken_10000",
+        "china_telecom_cookie",
+        "telecom_sign",
+        "telecom_act"
+      ]
+    },
+    {
+          "id": "Xiao.Downloadmonitoring",
+          "name": "下载监控",
+          "author": "@Xiaobailian",
+          "script": "",
+          "icons": [
+            "https://raw.githubusercontent.com/githubdulong/Script/master/Images/SpeedSwitcher.png",
+            "https://raw.githubusercontent.com/githubdulong/Script/master/Images/SpeedSwitcher.png"
+          ],
+          "keys": [
+"@Xiao_download.default_config.MINSPEED",
+"@Xiao_download.default_config.TOTALTIME",
+"@Xiao_download.default_config.INTERVAL",
+"@Xiao_download.default_config.INITTIME",
+"@Xiao_download.default_config.GROUP",
+"@Xiao_download.default_config.TIMEOUT",
+"@Xiao_download.default_config.isDebug",
+"@Xiao_download.configList"
+          ],
+          "settings": [
+            {
+              "id": "@Xiao_download.default_config.MINSPEED",
+              "name": "MINSPEED-最低速度",
+              "val": "",
+              "type": "text",
+              "desc": "设置监测的最小速度要求（单位MB/S）"
+            },
+            {
+              "id": "@Xiao_download.default_config.TOTALTIME",
+              "name": "TOTALTIME-监控时间",
+              "val": "",
+              "type": "text",
+              "desc": "设置监控时间（单位秒）"
+            },
+            {
+              "id": "@Xiao_download.default_config.INTERVAL",
+              "name": "INTERVAL-轮询时间",
+              "val": "",
+              "type": "text",
+              "desc": "设置查询间隔（单位秒）"
+            },
+            {
+              "id": "@Xiao_download.default_config.INITTIME",
+              "name": "INITTIME-更新时间",
+              "val": "",
+              "type": "text",
+              "desc": "切换策略后，会等待一段时间恢复初始化(单位自定义: s ms min h)"
+            },
+            {
+              "id": "@Xiao_download.default_config.GROUP",
+              "name": "GROUP-策略组",
+              "val": "",
+              "type": "text",
+              "desc": "设置监测的策略组名称(必填)"
+            },
+            {
+              "id": "@Xiao_download.default_config.TIMEOUT",
+              "name": "TIMEOUT-超时",
+              "val": "380",
+              "type": "text",
+              "desc": "脚本超时时间 (单位秒)"
+            },
+            {
+              "id": "@Xiao_download.default_config.isDebug",
+              "name": "isDebug",
+              "val": true,
+              "type": "boolean",
+              "desc": "打印日志"
+            },
+            {
+              "id": "@Xiao_download.configList",
+              "name": "自定义域名配置 (可选)",
+              "val": "",
+              "type": "textarea",
+              "placeholder": "HOST=域名&isDebug=false\nHOST=域名2&TOTALTIME=30",
+              "autoGrow": true,
+              "rows": 2,
+              "desc": "每个域名可配置多个属性,只需要填写与主配置不同的部分"
+            }
+            
+          ],
+          "icon": "https://raw.githubusercontent.com/githubdulong/Script/master/Images/SpeedSwitcher.png"
+        },
+    {
+  "id": "Auto_join_TF",
+  "name": "TestFlight监控",
+  "author": "@MuTu888",
+  "script": "https://raw.githubusercontent.com/githubdulong/Script/master/Auto_join_TF.js",
+  "icons": [
+    "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png",
+    "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"
+  ],
+  "keys": [
+    "session_id",
+    "session_digest",
+    "request_id",
+    "key",
+    "APP_ID"
+  ],
+  "settings": [
+    {
+      "id": "APP_ID",
+      "name": "填写APP_ID或点击TF链接自动捕获",
+      "val": "",
+      "type": "textarea",
+      "autoGrow": "true",
+      "rows": 1,
+      "desc": "填写APP_ID 多个用英文逗号隔开(勿加空格)示例：iSTXKF4K,INmLTx8d"
+    }
+  ]
+      }
+    ]
+}

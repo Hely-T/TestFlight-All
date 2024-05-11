@@ -1,0 +1,9 @@
+#!name=京东销卡
+#!desc=会员卡跳转验证 2021-06-03 15:34:30
+#!system=ios
+
+[URL Rewrite]
+^(https://shopmember.m.jd.com/)(shopcard/\?)(venderId=[0-9]+).* $1member/memberCloseAccount?$3 302
+
+[MITM]
+hostname =  %APPEND% shopmember.m.jd.com
