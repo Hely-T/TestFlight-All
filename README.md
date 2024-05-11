@@ -13,7 +13,7 @@
 
 ### Cách sử dụng Sugar5
 
-
+- Vào file code.txt trong Sugar5 copy code
 
 ### Lời tâm sự
 - Đây là một dự án được tôi Dịch lại và đã fix những lỗi vặt, các bạn yêu quý có thể sử dụng. Cảm ơn vì đã tin tưởng!
