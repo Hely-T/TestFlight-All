@@ -3,9 +3,9 @@ Thời gian cập nhật: 2024.05.11 10:40
 Nội dung được cập nhật: Đã thêm tính năng lưu giữ hoặc biến mất chậm theo danh mục thông báo, âm thanh nhắc đóng mô-đun (tham số SurgeTF)
 
 Sugar5
-https://github.com/Hely-T/TestFlight-All/blob/master/Tool/Sugar5/Surge/AUTOTF.sgmodule
+https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Sugar5/Surge/AUTOTF.sgmodule
 BoxJS
-https://github.com/Hely-T/TestFlight-All/blob/master/Tool/Sugar5/boxjs.json
+https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Sugar5/boxjs.json
 */
 
 if (typeof $request !== 'undefined' && $request) {
