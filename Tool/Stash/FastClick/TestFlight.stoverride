@@ -1,0 +1,36 @@
+name: "Hely-T: ✈ TestFlight"
+desc: |-
+  1.Tùy chỉnh khu vực cửa hàng đăng nhập TestFlight
+  2.Lưu và chuyển đổi nhiều tài khoản (BoxJ cần được cấu hình để sử dụng)
+  3.Làm cho các ứng dụng phổ quát có thể cài đặt được trên mọi thiết bị xử lý của Apple
+openUrl: "http://boxjs.com/#/app/iRingo.TestFlight"
+author: "Hely-T"
+homepage: "https://github.com/Hely-T"
+manual: "https://github.com/Hely-T/TestFlight-ALL/
+icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TestFlight_2.png"
+category: "Hely-T"
+
+http:
+  mitm:
+    - "testflight.apple.com"
+  script:
+    - match: ^https?:\/\/testflight\.apple\.com\/
+      name: TestFlight.request
+      type: request
+      require-body: true
+      timeout: 10
+      argument:
+    - match: ^https?:\/\/testflight\.apple\.com\/
+      name: TestFlight.response
+      type: response
+      require-body: true
+      timeout: 10
+      argument:
+
+script-providers:
+  TestFlight.request:
+    url: https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/TestFlight.request.js
+    interval: 86400
+  TestFlight.response:
+    url: https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/TestFlight.response.js
+    interval: 86400
