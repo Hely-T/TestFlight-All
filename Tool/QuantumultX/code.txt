@@ -1,0 +1,3 @@
+https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/QuantumultX/Rewrite/testflight.key.snippet
+
+*/1 * * * * * https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/Auto_join_TF_Quan.js, tag=TestFlightM, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png, enabled=true
