@@ -34,7 +34,7 @@
 - Ở Setting mục Rewrite -> Resources -> Copy link số 1 -> Bên trên góc phải màn hình có hình 2 xích móc vào nhau hãy bấm vào -> Resource URL: Dán link nãy vừa copy -> Tag đặt tên theo ý thích. -> Quay ra setting và bật Rewrite lên
 - Kéo xuống ở mục Profile chọn Edit -> + task_local: copy mục số 2 và dán vào bên dưới task_local -> + mitm: dán mục số 3 bên dưới
 - Quay lại Rewrite -> Resource -> 2 Xích -> Dán link số 4 -> Tag= boxjs.
--Bật QuantumultX -> Vào Safari -> Ghi: boxjs.com -> Subscriptions -> Add Subscription -> Dán link số 5 -> Save -> Click vào mục tên: Tự động tham gia TestFlight.
+-Bật QuantumultX -> Vào Safari -> Ghi: boxjs.com -> Subscriptions -> Add Subscription -> Dán link số 5 -> Save -> Vào app TestFlight để lấy thông tin.
 - Applications -> Theo dõi TestFlight -> Nhập link cần treo -> Done!
 * **Fast Click. Có thể không hoạt động [QuantumultX](https://api.boxjs.app/quanx/add-resource?remote-resource=%7B%22rewrite_remote%22%3A%5B%22https%3A%2F%2Fgithub.com/Hely-T/TestFlight-All/raw/master/Tool/QuantumultX/FastClick/TestFlight.snippet)**
 ### Cách sử dụng Stash
@@ -42,7 +42,7 @@
 - Có 2 file. 1 File sử dụng thủ công bằng cách:
 - Mục Ghi Đè và Rewrite hãy thêm link 1 và link 2 và link 3
 - Ở mục MitM -> Bấm dấu + -> Dán link 3 vào -> Tải xuống -> Done
-- Bật VPN -> Vào Safari -> Ghi: boxjs.com hoặc boxjs.net -> Subscriptions -> Add Subscription -> Dán link số 4 -> Save -> Click vào mục tên: Tự động tham gia TestFlight.
+- Bật VPN -> Vào Safari -> Ghi: boxjs.com hoặc boxjs.net -> Subscriptions -> Add Subscription -> Dán link số 4 -> Save -> Vào app TestFlight để lấy thông tin.
 Applications -> Theo dõi TestFlight -> Nhập link cần treo -> Done!
 
 - Cách 2: Cài file nhanh: **Stash Fast Click [Stash](https://link.stash.ws/install-override/github.com/Hely-T/TestFlight-All/raw/master/Tool/Stash/FastClick/TestFlight.stoverride)**
