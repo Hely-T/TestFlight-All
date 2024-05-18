@@ -1,53 +1,53 @@
 const $ = new Env('BoxJs')
 
-// 为 eval 准备的上下文环境
+// Bối cảnh được chuẩn bị để đánh giá
 const $eval_env = {}
 
 $.version = '0.19.2'
 $.versionType = 'beta'
 
-// 发出的请求需要需要 Surge、QuanX 的 rewrite
+// Yêu cầu đưa ra yêu cầu viết lại Surge và QuanX
 $.isNeedRewrite = true
 
 /**
  * ===================================
- * 持久化属性: BoxJs 自有的数据结构
+ * Thuộc tính liên tục: Cấu trúc dữ liệu riêng của BoxJs
  * ===================================
  */
 
-// 存储`用户偏好`
+// Lưu trữ sở thích của người dùng
 $.KEY_usercfgs = 'chavy_boxjs_userCfgs'
-// 存储`应用会话`
+// Lưu trữ phiên ứng dụng
 $.KEY_sessions = 'chavy_boxjs_sessions'
-// 存储`页面缓存`
+// Lưu trữ trang cache
 $.KEY_web_cache = 'chavy_boxjs_web_cache'
-// 存储`应用订阅缓存`
+// Lưu trữ Bộ đệm đăng ký ứng dụng
 $.KEY_app_subCaches = 'chavy_boxjs_app_subCaches'
-// 存储`全局备份` (弃用, 改用 `chavy_boxjs_backups`)
+// Lưu trữ bản sao lưu toàn cầu (không được dùng nữa, thay vào đó hãy sử dụng `chavy_boxjs_backups`)
 $.KEY_globalBaks = 'chavy_boxjs_globalBaks'
-// 存储`备份索引`
+// Lưu trữ chỉ mục dự phòng
 $.KEY_backups = 'chavy_boxjs_backups'
-// 存储`当前会话` (配合切换会话, 记录当前切换到哪个会话)
+// Lưu trữ phiên hiện tại (kết hợp với phiên chuyển đổi, ghi lại phiên nào hiện đang được chuyển sang)
 $.KEY_cursessions = 'chavy_boxjs_cur_sessions'
 
 /**
  * ===================================
- * 持久化属性: BoxJs 公开的数据结构
+* Thuộc tính bền vững: cấu trúc dữ liệu được hiển thị bởi BoxJs
  * ===================================
  */
 
-// 存储用户访问`BoxJs`时使用的域名
+// Lưu trữ tên miền được người dùng sử dụng để truy cập `BoxJs`
 $.KEY_boxjs_host = 'boxjs_host'
 
-// 请求响应体 (返回至页面的结果)
-$.json = $.name // `接口`类请求的响应体
-$.html = $.name // `页面`类请求的响应体
+// Nội dung phản hồi yêu cầu (kết quả được trả về trang)
+$.json = $.name // Nội dung phản hồi của yêu cầu lớp `giao diện`
+$.html = $.name // Nội dung phản hồi của yêu cầu lớp `page`
 
-// 页面源码地址
+//địa chỉ mã nguồn trang
 $.web = `https://cdn.jsdelivr.net/gh/chavyleung/scripts@${
   $.version
 }/box/chavy.boxjs.html?_=${new Date().getTime()}`
-// 版本说明地址 (Release Note)
+// Địa chỉ ghi chú phát hành (Release Note)
 $.ver = `https://raw.githubusercontent.com/chavyleung/scripts/master/box/release/box.release.json`
 
 !(async () => {
@@ -166,11 +166,11 @@ async function handlePage() {
         isQueryUrl ? '&' : '?'
       }_=${new Date().getTime()}`
       boxdata.syscfgs.isDebugMode = true
-      console.log(`[WARN] 调试模式: $.web = : ${$.web}`)
+      console.log(`[WARN] Chế độ kiểm tra sửa lỗi: $.web = : ${$.web}`)
     }
     // 如果调用这个方法来获取缓存, 且标记为`非调试模式`
     const getcache = () => {
-      console.log(`[ERROR] 调试模式: 正在使用缓存的页面!`)
+      console.log(`[ERROR] Chế độ kiểm tra sửa lỗi: Sử dụng trang được lưu trong bộ nhớ cache!`)
       boxdata.syscfgs.isDebugMode = false
       return $.getjson($.KEY_web_cache).cache
     }
@@ -232,11 +232,11 @@ async function handleQuery() {
 
       $.msg(
         $.name,
-        '❗️发现有脚本或人正在读取你的数据',
+        '❗️Đã tìm thấy tập lệnh hoặc người đang đọc dữ liệu của bạn',
         [
-          '请注意数据安全, 你可以: ',
-          '1. 在 BoxJs 的脚本日志中查看详情',
-          '2. 在 BoxJs 的页面 (侧栏) 中 "不显示查询警告"'
+          'Hãy chú ý đến vấn đề bảo mật dữ liệu, bạn có thể: ',
+          '1. Xem chi tiết trong nhật ký tập lệnh của BoxJs',
+          '2. Trong trang BoxJs (thanh bên) "Không hiển thị cảnh báo truy vấn"'
         ].join('\n')
       )
 
@@ -247,7 +247,7 @@ async function handleQuery() {
     $.log(
       [
         '',
-        '❗️❗️❗️ 发现有脚本或人正在读取你的数据 ❗️❗️❗️',
+        '❗️❗️❗️ Đã tìm thấy tập lệnh hoặc người đang đọc dữ liệu của bạn ❗️❗️❗️',
         JSON.stringify($request),
         ''
       ].join('\n')
@@ -384,8 +384,8 @@ function getSystemApps() {
   const sysapps = [
     {
       id: 'BoxSetting',
-      name: '偏好设置',
-      descs: ['可手动执行一些抹掉数据的脚本', '可设置明暗两种主题下的主色调', '可设置壁纸清单'],
+      name: 'Sở thích',
+      descs: ['Bạn có thể thực thi thủ công một số tập lệnh để xóa dữ liệu', 'Bạn có thể đặt màu chính của chủ đề sáng và tối', 'Bạn có thể đặt danh sách hình nền'],
       keys: [
         '@chavy_boxjs_userCfgs.httpapi',
         '@chavy_boxjs_userCfgs.bgimg',
@@ -926,26 +926,26 @@ function reloadAppSubCache(url) {
       subcaches[url] = $.toObj(resp.body)
       subcaches[url].updateTime = new Date()
       $.setjson(subcaches, $.KEY_app_subCaches)
-      $.log(`更新订阅, 成功! ${url}`)
+      $.log(`Cập nhật đăng ký, thành công! ${url}`)
     } catch (e) {
       $.logErr(e)
-      $.log(`更新订阅, 失败! ${url}`)
+      $.log(`Cập nhật đăng ký, thất bại! ${url}`)
     }
   })
 }
 
 async function reloadAppSubCaches() {
-  $.msg($.name, '更新订阅: 开始!')
+  $.msg($.name, 'Cập nhật đăng ký: bắt đầu!')
   const reloadActs = []
   const usercfgs = getUserCfgs()
   usercfgs.appsubs.forEach((sub) => {
     reloadActs.push(reloadAppSubCache(sub.url))
   })
   await Promise.all(reloadActs)
-  $.log(`全部订阅, 完成!`)
+  $.log(`Đăng ký tất cả, Hoàn thành!`)
   const endTime = new Date().getTime()
   const costTime = (endTime - $.startTime) / 1000
-  $.msg($.name, `更新订阅: 完成! 🕛 ${costTime} 秒`)
+  $.msg($.name, `Cập nhật đăng ký: Hoàn thành! 🕛 ${costTime} 秒`)
 }
 
 function upgradeUserData() {
@@ -1009,7 +1009,7 @@ function upgradeGlobalBaks() {
 
 function updateCurSesssions(appId, data) {
   if (!appId) {
-    console.log(`[updateCurSesssions] 跳过! 没有指定 appId!`)
+    console.log(`[updateCurSesssions] Bỏ qua! Không được chỉ định APP_ID!`)
     return
   }
 
@@ -1017,7 +1017,7 @@ function updateCurSesssions(appId, data) {
   const curSessionId = curSessions[appId]
   if (!curSessionId) {
     console.log(
-      `[updateCurSesssions] 跳过! 应用 [${appId}] 找不到当前会话, 请先应用会话!`
+      `[updateCurSesssions] Bỏ qua! [${appId}] Không tìm thấy phiên hiện tại, vui lòng đăng ký phiên trước!`
     )
     return
   }
@@ -1026,7 +1026,7 @@ function updateCurSesssions(appId, data) {
   const session = sessions.find((session) => session.id === curSessionId)
   if (!session) {
     console.log(
-      `[updateCurSesssions] 跳过! 应用 [${appId}] 找不到当前会话, 请先应用会话!`
+      `[updateCurSesssions] Bỏ qua! [${appId}] Không tìm thấy phiên hiện tại, vui lòng đăng ký phiên trước!`
     )
     return
   }
