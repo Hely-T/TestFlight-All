@@ -16,6 +16,7 @@ http:
   mitm:
     - "boxjs.com"
     - "boxjs.net"
+    - "testflight.apple.com"
     - "*.boxjs.com"
     - "*.boxjs.net"
   script:
