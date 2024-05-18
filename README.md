@@ -38,7 +38,5 @@
 - Loon tôi đã fix thông báo httpconnect (Không thông báo liên tục khi kết nối yếu nữa)
 - Surge tôi đã update Auto Setup Name + Auto Cron. Mọi người chỉ cần làm theo hướng dẫn và sử dụng
 - 18/05/2024: Đã update QuantumultX và việt hoá. Mọi người hãy sử dụng và cảm nhận.
+- Update: Stash đã được làm xong nhưng cách chạy thì tôi chưa biết tại chưa có app để test =)))) 
 
-### Lời kết:
-
-- Khi nào tôi có APPLE ID Để tải Stash thì mình sẽ Việt Hoá file đó sau. Do hiện tại cũng chưa có app nên không thể test và check lỗi được, mong mọi người thông cảm !!!
