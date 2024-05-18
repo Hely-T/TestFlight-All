@@ -35,8 +35,7 @@
 
 ### Cách sử dụng Stash
 - Có 2 file. 1 File sử dụng thủ công bằng cách cài giống như QuantumultX
-- Cách 2: Cài file nhanh
-* **Stash Fast Click [TestFlight.stoverride](https://link.stash.ws/install-override/github.com/Hely-T/TestFlight-All/raw/master/Tool/Stash/FastClick/TestFlight.stoverride)**
+- Cách 2: Cài file nhanh: **Stash Fast Click [TestFlight.stoverride](https://link.stash.ws/install-override/github.com/Hely-T/TestFlight-All/raw/master/Tool/Stash/FastClick/TestFlight.stoverride)**
 
 ### Lời tâm sự
 
