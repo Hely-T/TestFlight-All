@@ -48,5 +48,5 @@ cron:
       timeout: 60
 script-providers:
   "TestFlight Tự động tham gia":
-    url: https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/Auto_join_TF.js_script-converter-stash.js
+    url: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/Auto_join_TF_Quan.js
     interval: 86400
