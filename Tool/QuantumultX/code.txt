@@ -4,6 +4,6 @@ https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/QuantumultX/
 
 hostname = testflight.apple.com
 
-
+https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/boxjs/rewrite/boxjs.rewrite.quanx.conf
 
 https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/boxjs.json
