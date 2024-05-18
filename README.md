@@ -38,7 +38,11 @@
 - Applications -> Theo dõi TestFlight -> Nhập link cần treo -> Done!
 * **Fast Click. Có thể không hoạt động [QuantumultX](https://api.boxjs.app/quanx/add-resource?remote-resource=%7B%22rewrite_remote%22%3A%5B%22https%3A%2F%2Fgithub.com/Hely-T/TestFlight-All/raw/master/Tool/QuantumultX/FastClick/TestFlight.snippet)**
 ### Cách sử dụng Stash
-- Có 2 file. 1 File sử dụng thủ công bằng cách cài giống như QuantumultX
+- Đầu tiên: **Toàn bộ câu lệnh mình để ở [Đây](https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Stash/code.txt)**
+- Có 2 file. 1 File sử dụng thủ công bằng cách:
+- Mục Rewrite hãy thêm link 1 và link 2
+-  
+
 - Cách 2: Cài file nhanh: **Stash Fast Click [Stash](https://link.stash.ws/install-override/github.com/Hely-T/TestFlight-All/raw/master/Tool/Stash/FastClick/TestFlight.stoverride)**
 
 ### Lời tâm sự
