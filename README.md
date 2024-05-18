@@ -1,8 +1,11 @@
- * **Script By [Hely-T](https://github.com/Hely-T)**
-### Script Auto Join TestFlight
 
+### Script Auto Join TestFlight
+ * **Script By [Hely-T](https://github.com/Hely-T)**
 - Không sử dụng proxy để tải xuống tệp
 - Vui lòng cài Certificate và Trust trong cài đặt chung máy trước khi sử dụng
+
+ * Tổng hợp các file click nhanh để cài đặt auto. Có thể không hoạt động
+**[Loon](https://api.boxjs.app/loon/import?plugin=https://github.com/Hely-T/TestFlight-All/raw/master/Tool/Loon/FastClick/TestFlight.plugin)**
 
 ### Cách sử dụng Loon
 
