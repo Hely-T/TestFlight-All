@@ -1,6 +1,6 @@
 /*
 Script Author: Hely-T
-Reference: https://raw.githubusercontent.com/Hely-T/TestFlight-All/
+Reference: https://github.com/Hely-T/TestFlight-All/
 Thanks to a great person for adapting this script into Loon version!
 */
 !(async () => {

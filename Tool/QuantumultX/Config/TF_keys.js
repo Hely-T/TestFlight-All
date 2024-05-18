@@ -1,6 +1,6 @@
 /*
 Script Author: Hely-T
-Reference: https://raw.githubusercontent.com/Hely-T/TestFlight-All/
+Reference: https://github.com/Hely-T/TestFlight-All/
 */
 
 const reg1 = /^https:\/\/testflight\.apple\.com\/v3\/accounts\/(.*)\/apps$/;
