@@ -9,10 +9,10 @@
       "id": "Auto_join_TF",
       "name": "Theo dõi TestFlight",
       "author": "@Hely-T",
-      "script": "https://raw.githubusercontent.com/yuichydev/TF/main/Auto_join_TF_boxjs.js",
+      "script": "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/Auto_join_TF_boxjs.js",
       "icons": [
-        "https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png",
-        "https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png"
+        "https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/PNG/TestFlight.png",
+        "https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/PNG/TestFlight.png"
       ],
       "keys": [
         "session_id",
