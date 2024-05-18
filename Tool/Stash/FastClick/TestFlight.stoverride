@@ -7,7 +7,7 @@ openUrl: "http://boxjs.com/#/app/iRingo.TestFlight"
 author: "Hely-T"
 homepage: "https://github.com/Hely-T"
 manual: "https://github.com/Hely-T/TestFlight-ALL/
-icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TestFlight_2.png"
+icon: "https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/PNG/TestFlight_2.png"
 category: "Hely-T"
 
 http:
