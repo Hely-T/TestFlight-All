@@ -1,0 +1,37 @@
+{
+  "id": "jointestflight.app.sub",
+  "name": "Tự động tham gia TestFligt",
+  "author": "@Hely-T",
+  "icon": "https://i.pinimg.com/736x/a6/78/49/a678490f1361d88d4518166025845220.jpg",
+  "repo": "https://github.com/Hely-T/TestFlight-All/tree/master",
+  "apps": [
+    {
+      "id": "Auto_join_TF",
+      "name": "Theo dõi TestFlight",
+      "author": "@Hely-T",
+      "script": "https://raw.githubusercontent.com/yuichydev/TF/main/Auto_join_TF_boxjs.js",
+      "icons": [
+        "https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png",
+        "https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/TestFlight.png"
+      ],
+      "keys": [
+        "session_id",
+        "session_digest",
+        "request_id",
+        "key",
+        "APP_ID"
+      ],
+      "settings": [
+        {
+          "id": "APP_ID",
+          "name": "Nhập APP_ID hoặc nhấn vào liên kết TF để tự động thu thập",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": "true",
+          "rows": 1,
+          "desc": "Nhập APP_ID, nhiều hơn một ID thì phân cách bằng dấu phẩy (không cách). Ví dụ: iSTXKF4K,INmLTx8d"
+        }
+      ]
+    }
+  ]
+}
