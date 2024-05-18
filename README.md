@@ -1,3 +1,4 @@
+ * **Script By [Hely-T](https://github.com/Hely-T)**
 ### Script Auto Join TestFlight
 
 - Không sử dụng proxy để tải xuống tệp
@@ -32,11 +33,15 @@
 -Bật QuantumultX -> Vào Safari -> Ghi: boxjs.com -> Subscriptions -> Add Subscription -> Dán link số 5 -> Save -> Click vào mục tên: Tự động tham gia TestFlight.
 - Applications -> Theo dõi TestFlight -> Nhập link cần treo -> Done!
 
+### Cách sử dụng Stash
+- Có 2 file. 1 File sử dụng thủ công bằng cách cài giống như QuantumultX
+- Cách 2: Cài file nhanh
+* **Stash Fast Click [Click vào đây](https://link.stash.ws/install-override/github.com/Hely-T/TestFlight-All/raw/master/Tool/Stash/FastClick/TestFlight.stoverride)**
+
 ### Lời tâm sự
 
 - Đây là một bộ source được tôi fork từ bên Trung Quốc về và đã Việt Hoá lại (Loon,Surge)
 - Loon tôi đã fix thông báo httpconnect (Không thông báo liên tục khi kết nối yếu nữa)
 - Surge tôi đã update Auto Setup Name + Auto Cron. Mọi người chỉ cần làm theo hướng dẫn và sử dụng
-- 18/05/2024: Đã update QuantumultX và việt hoá. Mọi người hãy sử dụng và cảm nhận.
-- Update: Stash đã được làm xong nhưng cách chạy thì tôi chưa biết tại chưa có app để test =)))) 
+- 18/05/2024: Đã update QuantumultX.Stash và việt hoá. Mọi người hãy sử dụng và cảm nhận.
 
