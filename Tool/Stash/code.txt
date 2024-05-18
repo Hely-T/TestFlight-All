@@ -1,3 +1,7 @@
 1: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Stash/Auto_join_TF.stoverride
 
 2: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Stash/testflight.key.stoverride
+
+3: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Stash/Stash.stoverride
+
+4: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/boxjs.json
