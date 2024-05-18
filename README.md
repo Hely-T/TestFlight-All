@@ -5,7 +5,7 @@
 - Vui lòng cài Certificate và Trust trong cài đặt chung máy trước khi sử dụng
 
  * Tổng hợp các file click nhanh để cài đặt auto. Có thể không hoạt động
-**[Loon](https://api.boxjs.app/loon/import?plugin=https://github.com/Hely-T/TestFlight-All/raw/master/Tool/Loon/FastClick/TestFlight.plugin)**
+**[Loon](https://api.boxjs.app/loon/import?plugin=https://github.com/Hely-T/TestFlight-All/raw/master/Tool/Loon/FastClick/TestFlight.plugin)**,**[Surge5](https://api.boxjs.app/surge/install-module?url=https://github.com/Hely-T/TestFlight-All/raw/master/Tool/Surge5/FastClick/TestFlight.sgmodule)**,**[QuantumultX](https://api.boxjs.app/quanx/add-resource?remote-resource=%7B%22rewrite_remote%22%3A%5B%22https%3A%2F%2Fgithub.com/Hely-T/TestFlight-All/raw/master/Tool/QuantumultX/FastClick/TestFlight.snippet)**,**[Stash](https://link.stash.ws/install-override/github.com/Hely-T/TestFlight-All/raw/master/Tool/Stash/FastClick/TestFlight.stoverride)**
 
 ### Cách sử dụng Loon
 
