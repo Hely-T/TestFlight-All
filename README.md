@@ -23,12 +23,24 @@
 - Click vào APP_ID và điền ID các app TestFlight cần auto. Ngăn cách nhau bằng dấu "," và viết liền không cách.
 - => Kiểm tra lịch sử ở Utilities -> Logs
 
+### Cách sử dụng QuantumultX
+
+- Đầu tiên: Toàn bộ câu lệnh mình để ở (https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/QuantumultX/code.txt)
+- Ở Setting mục Rewrite -> Resources -> Copy link số 1 -> Bên trên góc phải màn hình có hình 2 xích móc vào nhau hãy bấm vào -> Resource URL: Dán link nãy vừa copy -> Tag đặt tên theo ý thích. -> Quay ra setting và bật Rewrite lên
+- Kéo xuống ở mục Profile chọn Edit -> 
++ task_local: copy mục số 2 và dán vào bên dưới task_local
++ mitm: dán mục số 3 bên dưới
+- Quay lại Rewrite -> Resource -> 2 Xích -> Dán link số 4 -> Tag= boxjs.
+-Bật QuantumultX -> Vào Safari -> Ghi: boxjs.com -> Subscriptions -> Add Subscription -> Dán link số 5 -> Save -> Click vào mục tên: Tự động tham gia TestFlight.
+- Applications -> Theo dõi TestFlight -> Nhập link cần treo -> Done!
+
 ### Lời tâm sự
 
 - Đây là một bộ source được tôi fork từ bên Trung Quốc về và đã Việt Hoá lại (Loon,Surge)
 - Loon tôi đã fix thông báo httpconnect (Không thông báo liên tục khi kết nối yếu nữa)
 - Surge tôi đã update Auto Setup Name + Auto Cron. Mọi người chỉ cần làm theo hướng dẫn và sử dụng
+- 18/05/2024: Đã update QuantumultX và việt hoá. Mọi người hãy sử dụng và cảm nhận.
 
 ### Lời kết:
 
-- Khi nào tôi có APPLE ID Để tải Quantumult X với Stash thì mình sẽ Việt Hoá các file đó sau. Do hiện tại cũng chưa có app nên không thể test và check lỗi được, mong mọi người thông cảm !!!
+- Khi nào tôi có APPLE ID Để tải Stash thì mình sẽ Việt Hoá file đó sau. Do hiện tại cũng chưa có app nên không thể test và check lỗi được, mong mọi người thông cảm !!!

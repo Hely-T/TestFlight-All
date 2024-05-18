@@ -1,9 +1,9 @@
-https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/QuantumultX/Rewrite/testflight.key.snippet
+1: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/QuantumultX/Rewrite/testflight.key.snippet
 
-*/1 * * * * * https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/Auto_join_TF_Quan.js, tag=TestFlightM, img-url=https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/PNG/TestFlight.png, enabled=true
+2: */1 * * * * * https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/Auto_join_TF_Quan.js, tag=TestFlightM, img-url=https://raw.githubusercontent.com/Hely-T/Loon/master/Resource/PNG/TestFlight.png, enabled=true
 
-hostname = testflight.apple.com
+3: hostname = testflight.apple.com
 
-https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/boxjs/rewrite/boxjs.rewrite.quanx.conf
+4: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/boxjs/rewrite/boxjs.rewrite.quanx.conf
 
-https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/boxjs.json
+5: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/Script/TestFlight/boxjs.json
