@@ -14,9 +14,12 @@ http:
     - "*.boxjs.com:80"
     - "*.boxjs.net:80"
   mitm:
+    - "testflight.apple.com"
+    - "github.com"
+    - "raw.githubusercontent.com"
+    - "gist.githubusercontent.com"
     - "boxjs.com"
     - "boxjs.net"
-    - "testflight.apple.com"
     - "*.boxjs.com"
     - "*.boxjs.net"
   script:
