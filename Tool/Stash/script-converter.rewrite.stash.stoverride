@@ -20,5 +20,5 @@ http:
 
 script-providers:
   "chuyển đổi kịch bản":
-    url: https://raw.githubusercontent.com/xream/scripts/main/surge/modules/script-converter/script-converter.js
+    url: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Tool/Stash/TF_join_script-converter-stash.js
     interval: 86400
