@@ -13,7 +13,7 @@ if (typeof $argument != 'undefined') {
 
 let result = {}
 let body = `
-// 转换时间: ${new Date().toLocaleString('zh')}
+// thời gian chuyển đổi: ${new Date().toLocaleString('zh')}
 var setInterval = () => {}
 var clearInterval = () => {}
 var $task = {
@@ -109,7 +109,7 @@ let url
 !(async () => {
   if (!$.isRequest()) throw new Error('不是 request')
   url = $request.url.replace(/_script-converter-(stash|surge|loon|shadowrocket)\.js$/i, '')
-  $.log(`🔗 原始文件链接`, url)
+  $.log(`🔗 Liên kết tập tin gốc`, url)
   const res = await $.http.get({
     url,
     headers: {
@@ -139,10 +139,10 @@ let url
   .catch(async e => {
     $.logErr(e)
     const msg = `${$.lodash_get(e, 'message') || $.lodash_get(e, 'error') || e}`
-    if($.isShadowrocket() && msg.includes(`未能完成操作`)) {
-      $.log(`脚本转换`, `⚠️`, msg, url)
+    if($.isShadowrocket() && msg.includes(`Không thể hoàn tất thao tác`)) {
+      $.log(`chuyển đổi kịch bản`, `⚠️`, msg, url)
     } else {
-      await notify(`脚本转换`, `❌`, msg, url)
+      await notify(`chuyển đổi kịch bản`, `❌`, msg, url)
     }
     result = {
       response: {
