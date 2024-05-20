@@ -1,6 +1,8 @@
 name: converter script
 desc: Hiện đang thử nghiệm tập lệnh QX (yêu cầu nhị phân chưa được hỗ trợ)
 author: Hely-T
+icon: https://raw.githubusercontent.com/Hely-T/TestFlight-All/master/Resource/PNG/github1.png
+category: "Stash By Hely-T"
 # Thêm _script-converter-stash.js vào cuối link QX JS script
 
 # Sửa đổi từ https://github.com/Peng-YM/ScriptConverter
